@@ -6,6 +6,19 @@ gem 'rails', '4.1.0'
 
 gem 'pg'
 
+gem 'devise'
+
+group :development, :test do
+  gem 'dotenv-rails'
+  gem 'pry'
+  gem 'rspec-rails'
+end
+
+group :production do
+  gem 'rails_12factor'
+end
+gem 'soundcloud', '~> 0.3.2'
+
 # Use SCSS for stylesheets
 gem 'sass-rails', '~> 4.0.3'
 # Use Uglifier as compressor for JavaScript assets

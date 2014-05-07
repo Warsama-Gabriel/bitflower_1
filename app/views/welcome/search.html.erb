@@ -1,0 +1,10 @@
+
+<h1>Search For a Track!</h1>
+<%= form_tag results_path, :method => 'get' do %>
+  <p>
+    <%= text_field_tag :search, params[:q] %>
+    <%= submit_tag "Search"%>
+  </p>
+<% end %>
+
+

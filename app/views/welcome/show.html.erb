@@ -1,0 +1,18 @@
+
+ <h1>Your Search Results</h1>
+<div id="tracks">
+
+<table>
+  <%@tracks.each do |track| %>
+    <tr>
+    <td><%= track.title %><iframe width="100%" height="200" scrolling="no" frameborder="no" src="https://w.soundcloud.com/player/?visual=true&amp;url=<%= track.uri %>&amp;show_artwork=true&amp;client_id=<%ENV['SOUNDCLOUD_CLIENT_ID']%>"></iframe>
+    <%= link_to("Add to favorites", fav_path(track.id), method: :post)%>
+    </br>
+    </td>
+    </tr>
+  <% end %>
+</table>
+</div>
+</br>
+<%= link_to 'Back to Search', search_path %>
+
