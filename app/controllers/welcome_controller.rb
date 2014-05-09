@@ -18,11 +18,9 @@ class WelcomeController < ApplicationController
   end
 
   def search
-
   end
 
   def show
-
     @search = params[:search]
     @client = Soundcloud.new(:client_id => ENV['SOUNDCLOUD_CLIENT_ID'])
     @pagesize = 10
