@@ -1,12 +1,22 @@
+<div id="profile">
+  <h1>welcome to your profile page</h1>
+  <h2>Connect with soundcloud!</h2>
 
-<h1>Welcome to bitflower!</h1>
+  <%= link_to('connect to soundcloud', soundcloud_path, :class => 'btn btn-large btn-primary')%>
 
-<h2>Search for Tracks and add them to your favorite playlist!</h2>
+  <%= current_user.first_name %>
 
-<% @favs.each do |favorite| %>
-<iframe width="50%" height="200" scrolling="no" frameborder="no" src="https://w.soundcloud.com/player/?visual=true&amp;url=https://api.soundcloud.com/tracks/<%=favorite.track_id %>&amp;show_artwork=true&amp;client_id=<%ENV['SOUNDCLOUD_CLIENT_ID']%>"></iframe>
-<%= link_to("Remove from favorites", destroy_path(favorite.id), method: :delete)%>
-<% end %>
-<br />
-<br />
-<%= link_to 'Search for tracks', search_path %>
+  <h2>Search for Tracks and add them to your favorite playlist!</h2>
+  <h1><%= link_to 'Search for more tracks', search_path %></h1>
+  <br />
+  <div id='profile_tracks'>
+    <% @favs.each do |favorite| %>
+      <iframe width="45%" height="200" scrolling="no" frameborder="no" src="https://w.soundcloud.com/player/?visual=true&amp;url=https://api.soundcloud.com/tracks/<%=favorite.track_id %>&amp;show_artwork=&amp;client_id=<%ENV['SOUNDCLOUD_CLIENT_ID']%>"></iframe>
+      <%= link_to("Remove from favorites", destroy_path(favorite.id), method: :delete, :class => 'btn btn-large btn-primary')%>
+      <%= link_to("Update", update_path(favorite.id), method: :delete, :class => 'btn btn-large btn-primary')%>
+      <%= link_to("tweet!", tweets_path(favorite.track_id), method: "post", :class => 'btn btn-large btn-primary') %> </br>
+      <br>
+    <% end %>
+  </div>
+</div>
+

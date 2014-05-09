@@ -17,21 +17,24 @@ Rails.application.routes.draw do
 #                          PATCH  /users(.:format)               devise/registrations#update
 #                          PUT    /users(.:format)               devise/registrations#update
 #                          DELETE /users(.:format)               devise/registrations#destroy
-#                     root GET    /                              home#index
-#                  profile GET    /you/profile(.:format)         welcome#index
-#                   search GET    /you/search(.:format)          welcome#search
-#                  results GET    /you/results(.:format)         welcome#show
-#                      fav POST   /fav/:id(.:format)             welcome#fav
-#               you_update GET    /you/update(.:format)          welcome#update
-#                  destroy DELETE /fav/:id(.:format)             welcome#destroy
+#                      root GET    /                              home#index
+                 # profile GET    /you/profile(.:format)         welcome#index
+                 #  search GET    /you/search(.:format)          welcome#search
+                 # results GET    /you/results(.:format)         welcome#show
+                 #     fav POST   /fav/:id(.:format)             welcome#fav
+                 #  update DELETE /fav/update/:id(.:format)      welcome#update
+                 # destroy DELETE /fav/:id(.:format)             welcome#destroy
+
 
     root :to => "home#index"
 
   get '/you/profile',   :to =>  'welcome#index',  :as => :profile
+  post '/you/tweets/:track_id',    :to =>  'welcome#tweet',  :as =>  :tweets
   get '/you/search',     :to => 'welcome#search',  :as => :search #search page
   get '/you/results',   :to => 'welcome#show',    :as => :results #results page
+  get '/you/soundcloud',  :to => 'welcome#soundcloud', :as => :soundcloud
   post '/fav/:id',      :to => 'welcome#fav',      :as => :fav
-  get '/you/update',    :to => 'welcome#update',  :as => :you_update
+  delete '/fav/update/:id',  :to => 'welcome#update',  :as => :update
   delete '/fav/:id',    :to => 'welcome#destroy',  :as => :destroy
 
 end
