@@ -50,7 +50,7 @@ class WelcomeController < ApplicationController
     @client = SoundCloud.new({
       :client_id     => ENV['SOUNDCLOUD_CLIENT_ID'],
       :client_secret => ENV['SOUNDCLOUD_CLIENT_SECRET'],
-      :redirect_uri  => 'http://localhost:3000/you/profile'
+      :redirect_uri  => ENV['REDIRECT_URL']
     })
     redirect_to @client.authorize_url()
      
