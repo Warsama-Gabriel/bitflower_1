@@ -28,7 +28,7 @@
 h1, h2{
   font-size: 300%;
   text-align: center;
-  font-family: Lobster, cursive;
+  font-family: 'Lobster', cursive;
   color: white;
 }
 
@@ -44,6 +44,7 @@ p {
 .index {
   background-size: cover;
   background-image:url("http://www.listofimages.com/wp-content/uploads/2012/02/dj-turntables-dj-flood-music-techno-turntable-unce.jpg");
+  font-family: 'Lobster';
 }
 
 table {
