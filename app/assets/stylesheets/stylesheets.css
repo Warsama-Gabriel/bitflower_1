@@ -1,6 +1,15 @@
-body .profile {
+.profile_1 {
   background-size: cover;
-  background-image:url("http://wallfoy.com/wp-content/uploads/2014/03/Dark-Blue-Wallpaper-1.jpg");
+  background-image:url("http://p1.pichost.me/i/13/1359481.jpg");
+}
+
+.navbar {
+  background-color: #00005C;
+  border: none;
+}
+
+.navbar, p {
+  color: white;
 }
 
 #results {
@@ -12,8 +21,12 @@ body .profile {
   text-align: center;
 }
 
+#connect {
+  text-align: center;
+}
 
 h1, h2{
+  font-size: 300%;
   text-align: center;
   font-family: 'Lobster', cursive;
   color: white;
@@ -28,7 +41,7 @@ p {
   color: white;
 }
 
-body {
+.index {
   background-size: cover;
   background-image:url("http://www.listofimages.com/wp-content/uploads/2012/02/dj-turntables-dj-flood-music-techno-turntable-unce.jpg");
 }

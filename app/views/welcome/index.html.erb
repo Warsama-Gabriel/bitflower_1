@@ -1,13 +1,12 @@
+<% content_for :body_type do%>
+profile_1<% end %>
 <div id="profile">
-  <h1>welcome to your profile page</h1>
-  <h2>Connect with soundcloud!</h2>
-
-  <%= link_to('connect to soundcloud', soundcloud_path, :class => 'btn btn-large btn-primary')%>
-
-  <%= current_user.first_name %>
-
-  <h2>Search for Tracks and add them to your favorite playlist!</h2>
+  <h1>Welcome to your profile page</h1>
+  <h2>Connect with Soundcloud!</h2>
   <h1><%= link_to 'Search for more tracks', search_path %></h1>
+  <div id="connect">
+  <%= link_to('connect to soundcloud', soundcloud_path, :class => 'btn btn-large btn-primary')%>
+</div>
   <br />
   <div id='profile_tracks'>
     <% @favs.each do |favorite| %>

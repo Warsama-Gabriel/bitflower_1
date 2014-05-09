@@ -9,20 +9,22 @@
 </head>
 <body>
 <div id="container">
-  <div id="user_nav">
+ <div id="navbar">
+  <nav class="navbar navbar-default" role="navigation">
     <% if user_signed_in? %>
        Signed in as <%= current_user.email %>. Not you?
        <%= link_to "Sign out", destroy_user_session_path, :method => :delete %>
     <% else %>
       <%= link_to "Sign up", new_user_registration_path %> or <%= link_to "sign in", new_user_session_path %>
     <% end %>
-  </div>
+  </nav>
+ </div>
 
   <% flash.each do |name, msg| %>
     <%= content_tag :div, msg, :id => "flash_#{name}" %>
   <% end %>
   <%= link_to "Home", profile_path %>
-  
+  <body class="<%= yield :body_type %>">
   <%= yield %>
 </div>
 
