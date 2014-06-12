@@ -1,7 +1,6 @@
 
 - Bitflower WDI Project 1
 
-* Bitflower is a simple rails app which uses the soundcloud api to list songs and 
-tracks and provides an interface for a user to favorite and tweet selected soundcloud 
+* Bitflower is a simple rails app which uses the soundcloud api to list songs and tracks and provides an interface for a user to favorite and tweet selected soundcloud 
 songs to their friends.
 
