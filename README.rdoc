@@ -7,3 +7,4 @@
 
 * In order to enable the tweets functionality a user must have both a soundcloud account and a twitter account. Twttier accounts are made possible on soundcloud throught the connections tab. Once a user has logged in through the soundcloud portal Bitflower is able to tweet their favorite tracks. 
 
+www.bitflower.herokuapp.com
