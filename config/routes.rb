@@ -28,6 +28,8 @@ Rails.application.routes.draw do
 
     root :to => "home#index"
 
+  get '/simplesearch' => 'welcome#simplesearch'
+
   get '/you/profile',   :to =>  'welcome#index',  :as => :profile
   post '/you/tweets/:track_id',    :to =>  'welcome#tweet',  :as =>  :tweets
   get '/you/search',     :to => 'welcome#search',  :as => :search #search page

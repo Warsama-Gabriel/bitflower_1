@@ -1,16 +1,7 @@
-.profile_1 {
+/*.profile_1 {
   background-size: cover;
   background-image:url("http://www.listofimages.com/wp-content/uploads/2012/02/dj-turntables-dj-flood-music-techno-turntable-unce.jpg");
-}
-
-.navbar {
-  background-color: #00005C;
-  border: none;
-}
-
-.navbar, p {
-  color: white;
-}
+}*/
 
 #results {
   position: relative;
@@ -50,9 +41,3 @@ p {
 table {
   margin: auto;
 }
-
-#profile_tracks {
-  margin-left: 50px;
-  padding: 5%; 
-}
-

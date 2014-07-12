@@ -25,7 +25,7 @@ class WelcomeController < ApplicationController
     @client = Soundcloud.new(:client_id => ENV['SOUNDCLOUD_CLIENT_ID'])
     @pagesize = 10
     @page = params[:page]
-    @tracks = @client.get('/tracks', :q => @search, :licence => 'cc-by-sa', 
+    @tracks = @client.get('/tracks', :q => @search, :licence => 'cc-by-sa',
     :limit => @pagesize, :offset => @page)
   end
 
@@ -33,7 +33,7 @@ class WelcomeController < ApplicationController
     @id = params[:id] #store the track id
     @favs = Favorite.new
     @favs.track_id = @id
-    @favs.user_id = current_user.id 
+    @favs.user_id = current_user.id
     @favs.save
     redirect_to profile_path
   end
@@ -51,7 +51,7 @@ class WelcomeController < ApplicationController
       :redirect_uri  => ENV['REDIRECT_URL']
     })
     redirect_to @client.authorize_url()
-     
+
   end
 
   def tweet
@@ -65,6 +65,13 @@ class WelcomeController < ApplicationController
       :sharing_note => 'Check out my new sound')
 
     redirect_to profile_path
+  end
+
+  def simplesearch
+    @simplesearch = SimpleSearch.new SimpleSearch.get_params(params)
+    if @simplesearch.valid?
+      @favs = @simplesearch.search_within Favorite.all, :track_id
+    end
   end
 
   def destroy
