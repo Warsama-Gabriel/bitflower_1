@@ -33,9 +33,12 @@ p {
 }
 
 .index {
-  background-size: cover;
-  background-image:url("http://www.listofimages.com/wp-content/uploads/2012/02/dj-turntables-dj-flood-music-techno-turntable-unce.jpg");
+ /* background-image:url("http://www.listofimages.com/wp-content/uploads/2012/02/dj-turntables-dj-flood-music-techno-turntable-unce.jpg");*/
   font-family: 'Lobster';
+}
+
+.jumbotron {
+  background-color: #00001D;
 }
 
 table {

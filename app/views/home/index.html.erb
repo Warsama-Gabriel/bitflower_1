@@ -1,4 +1,14 @@
 <% content_for :body_type do%>
 index<% end %>
-  <h1>Welcome to Bitflower!</h1>
-  <h2> Find awesome tracks and save them to your playlist!</h2>
+  <div class="jumbotron">
+    <div class="container">
+      <div class="centered">
+      <h1>Welcome to Bitflower!</h1>
+      <p> Find awesome tracks and save them to your playlist!</p>
+      <br />
+        <%= button_to('Sign Up', new_user_session_path, :class => 'btn btn-primary btn-large')  %>
+      <br />
+      <p> Powered by <%= image_tag('soundcloud.png', :size => "160x180") %></p>
+      </div>
+    </div>
+  </div>
